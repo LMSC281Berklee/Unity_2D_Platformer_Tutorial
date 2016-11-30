@@ -7,16 +7,16 @@ public class SoundManager : MonoBehaviour {
 	public static AudioClip[] allSounds;
 	public static AudioSource maintheme;
 	public static bool mainthemebool = true;
-	public static void JessieFunction (GameObject objectForAudio) 
+	public static void JessieFunction (GameObject objectForAudio)
 
 	{
 		//an array to hold the sounds (Jessie)
 
-
+maintheme = Resources.load<AudioClip>("BackgroundMusic.mp3")
 		//load sounds into the array (Jessie)
-		allSounds = Resources.LoadAll<AudioClip>("Enemy");
+		allSounds = Resources.LoadAll<AudioClip>("EnemyBump");
 	}
-	void start(){ 
+	void start(){
 		spawner = GameObject.Find ("spawner");
 		mainthemebool = true;
 	}
@@ -36,6 +36,6 @@ public class SoundManager : MonoBehaviour {
 		if (mainthemebool = false) {
 			maintheme.Play ();
 		}
-		
+
 }
 }
