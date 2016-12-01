@@ -6,19 +6,19 @@ public class SoundManager : MonoBehaviour {
 	public GameObject hero;
 	public static SoundManager instance;
 	public static AudioClip[] allSounds;
-	public static AudioSource maintheme;
+	public static AudioSource maintheme = Resources.load<AudioClip>("BackgroundMusic.mp3");
 	public static bool mainthemebool = true;
-	public static void JessieFunction (GameObject objectForAudio) 
+	public static void JessieFunction (GameObject objectForAudio)
 
 	{
 		//an array to hold the sounds (Jessie)
 
 
 		//load sounds into the array (Jessie)
-		allSounds = Resources.LoadAll<AudioClip>("Enemy");
+		allSounds = Resources.LoadAll<AudioClip>("EnemyBump");
 
 	}
-	void start(){ 
+	void start(){
 		spawner = GameObject.Find ("spawner");
 		mainthemebool = true;
 	}
@@ -46,8 +46,8 @@ public class SoundManager : MonoBehaviour {
 		{
 			AudioClip mysound = allSounds [Random.Range (0, allSounds.Length)];
 				}
-	
 
-		
+
+
 }
 }
